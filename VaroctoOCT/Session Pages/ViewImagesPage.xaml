@@ -1,0 +1,51 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VaroctoOCT"
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" xmlns:local1="clr-namespace:VaroctoOCT;assembly=ImageViewer" xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="VaroctoOCT.ViewImagesPage"
+             xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+             mc:Ignorable="d" 
+             d:DesignHeight="1026.404" d:DesignWidth="1738.22" Width="Auto" Height="Auto" Unloaded="PageUnloading">
+    <Grid x:Name="_PageGrid" >
+        <Border x:Name="_InfoPanel" HorizontalAlignment="Left" BorderBrush="#FF323232" BorderThickness="0,0,1.5,0" Background="{DynamicResource VaroctoLight}" Margin="0,0,0,-0.333" Width="535">
+            <Grid x:Name="_InfoPanelGrid" Margin="0">
+                <local:PageHeader x:Name="_PageHeader" VerticalAlignment="Top" Height="68" Margin="0,0,-0.333,0"/>
+                <TextBox x:Name="_PatientIDTextBox" TextWrapping="Wrap" FontSize="14.667" Height="21" Margin="10,103.28,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="198" IsEnabled="False"/>
+                <TextBlock x:Name="_PatientIDTitle" TextWrapping="Wrap" Text="{DynamicResource PatientIDTitle}" Foreground="{DynamicResource TextBoxFg}" FontSize="14.667" Margin="10,82.32,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="208.703"/>
+                <TextBox x:Name="_FirstNameTextBox" TextWrapping="Wrap" HorizontalContentAlignment="Stretch" FontSize="14.667" Margin="10,150.214,0,0" HorizontalAlignment="Left" Width="198" Height="21" VerticalAlignment="Top" IsEnabled="False"/>
+                <TextBlock x:Name="_FirstNameTitle" TextWrapping="Wrap" Foreground="{DynamicResource TextBoxFg}" FontSize="14.667" Text="{DynamicResource FirstNameTitle}" Margin="10,129.254,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="191.713"/>
+                <TextBox x:Name="_LastNameTextBox" TextWrapping="Wrap" FontSize="14.667" Height="21" VerticalAlignment="Top" Margin="213,150,0,0" HorizontalAlignment="Left" Width="198" IsEnabled="False"/>
+                <TextBlock x:Name="_LastNameTitle" TextWrapping="Wrap" Foreground="{DynamicResource TextBoxFg}" FontSize="14.667" Text="{DynamicResource LastNameTitle}" Width="76" HorizontalAlignment="Left" Margin="213,130,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="_DOBTextBox" TextWrapping="Wrap" FontSize="14.667" Margin="10,201,0,0" HorizontalAlignment="Left" Width="198" VerticalAlignment="Top" Height="21" IsEnabled="False"/>
+                <TextBlock x:Name="_DOBTitle" TextWrapping="Wrap" Text="{DynamicResource DOBTitle}" Foreground="{DynamicResource TextBoxFg}" FontSize="14.667" Margin="10,179,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="192"/>
+                <TextBlock x:Name="_EyeSelecTitle" Margin="10,293,0,0" TextWrapping="Wrap" Foreground="{DynamicResource TextBoxFg}" FontSize="14.667" Text="{DynamicResource EyeDesc}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="134"/>
+                <TextBox x:Name="_EyeTypeTextBox" TextWrapping="Wrap" FontSize="14.667" Margin="10,313,0,0" HorizontalAlignment="Left" Width="100" VerticalAlignment="Top" Height="21" IsEnabled="False"/>
+                <TextBlock x:Name="_GenderTitle" Margin="10,223,0,0" TextWrapping="Wrap" Foreground="{DynamicResource TextBoxFg}" FontSize="14.667" Text="{DynamicResource GenderTitle}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="135"/>
+                <TextBox x:Name="_GenderTextBox" TextWrapping="Wrap" FontSize="14.667" Margin="10,243,0,0" HorizontalAlignment="Left" Width="100" VerticalAlignment="Top" Height="21" IsEnabled="False"/>
+                <TextBlock x:Name="SavedImagesTitle" Margin="11,370,0,0" TextWrapping="Wrap" Foreground="{DynamicResource TextBoxFg}" FontSize="14.667" VerticalAlignment="Top" HorizontalAlignment="Left" Width="134" Text="{DynamicResource SavedImagesTitle}"/>
+                <ScrollViewer HorizontalAlignment="Left" Height="623" VerticalAlignment="Top" Width="513" Margin="10,394,0,0">
+                    <ListBox x:Name="_SavedScanList" SelectionChanged="ScanSelectionChanged">
+                    </ListBox>
+                </ScrollViewer>
+
+            </Grid>
+        </Border>
+        <Grid x:Name="_ImagePanel" Background="{DynamicResource VaroctoDark}" Margin="535,0,0,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="174*"/>
+                <RowDefinition Height="853*"/>
+            </Grid.RowDefinitions>
+            <Border x:Name="ThumbnailViewPanel" BorderBrush="#FFCACACA" BorderThickness="1" Background="#FF051A24" Margin="25,10,13,10" ScrollViewer.CanContentScroll="True">
+                <Grid x:Name="ThumbnailViewArea" >
+                    <WrapPanel x:Name="ThumbnailPanel" Margin="10,34,9.667,10.333"/>
+                    <Label x:Name="label2" Content="{DynamicResource SelectedImageTitle}" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="14.667" d:IsLocked="True"/>
+                </Grid>
+            </Border>
+            <Border x:Name="ImageViewPanel" BorderBrush="#FFCACACA" BorderThickness="1" Background="#FF051A24" Margin="25,10,13,9.667" Grid.Row="1">
+                <Image x:Name="SelectedImage" Margin="0" Stretch="None"/>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

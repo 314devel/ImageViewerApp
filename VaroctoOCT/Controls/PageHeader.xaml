@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="VaroctoOCT.PageHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VaroctoOCT"
+             mc:Ignorable="d" 
+             d:DesignHeight="73.85" d:DesignWidth="314.241" Height="68">
+    <Grid Margin="5,5,5,0">
+        <Button x:Name="_BackButton" Content="Button" Height="44" Width="{DynamicResource GraphicButtonWidth}" Style="{DynamicResource BackButton}" Click="BackButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock x:Name="_Title" TextWrapping="Wrap" FontSize="18.667" FontWeight="Bold" Foreground="{DynamicResource TextBoxFg}" Text="&lt;Page Title&gt;" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,7,0,0"/>
+        <StackPanel Margin="6,6,46,24" Orientation="Horizontal" IsEnabled="False"/>
+        <Image x:Name="image" Height="32" VerticalAlignment="Top" Width="31" HorizontalAlignment="Right" Margin="0,4,5,0" Source="/ImageViewer;component/LogoSmall.png"/>
+        <TextBlock x:Name="_LogoutLabel" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Logout First Last..." FontSize="13.333" Foreground="White" MouseEnter="Logoutlabel_MouseEnter" MouseLeave="LogoutLabel_MouseLeave" MouseUp="LogoutLabel_MouseUp" VerticalAlignment="Bottom" Margin="0,0,5,0" TextDecorations="Underline" MouseDown="LogoutLabel_MouseDown"/>
+    </Grid>
+</UserControl>

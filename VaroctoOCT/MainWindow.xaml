@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VaroctoOCT"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="VaroctoOCT.MainWindow"
+        mc:Ignorable="d"
+        Title="Varocto OCT pVOCT" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="WindowLoaded" Width="1920" Height="1080">
+    <Window.Resources>
+        <local:GenderConverter x:Key="genderConverter"/>
+        <RadialGradientBrush x:Key="WindowBG">
+            <GradientStop Color="#FF115229" Offset="0.93"/>
+            <GradientStop Color="#FF299C51"/>
+            <GradientStop Color="#FF1C8240" Offset="0.073"/>
+        </RadialGradientBrush>
+    </Window.Resources>
+    <Grid Background="{DynamicResource VaroctoDark}" >
+        <Image x:Name="Logo_png" Source="Logo.png" Stretch="Fill" Opacity="0.2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1160" Height="874"/>
+        <ContentPresenter x:Name="_Content" Margin="0"/>
+        <Border Margin="0" HorizontalAlignment="Center" BorderBrush="Black" BorderThickness="1.5" VerticalAlignment="Center" Visibility="Collapsed" />
+    </Grid>
+</Window>

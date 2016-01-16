@@ -1,0 +1,18 @@
+﻿<Window x:Class="VaroctoOCT.MsgDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VaroctoOCT"
+        mc:Ignorable="d"
+        Title="MsgDialog" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="{DynamicResource VaroctoLight}" d:DesignWidth="434" d:DesignHeight="142.667" SizeToContent="WidthAndHeight" WindowStyle="ToolWindow">
+    <Grid>
+        <TextBlock x:Name="MsgBlock" TextWrapping="Wrap" Text="TextBlock" Foreground="White" Margin="47,10,9.667,53.333" Width="372"/>
+
+        <Button x:Name="OKButton" Content="{DynamicResource OkBtnTitle}" HorizontalAlignment="Right" Margin="0,0,10,9.667" VerticalAlignment="Bottom" Width="75" Style="{DynamicResource TextButtonStyle}" Foreground="White" IsDefault="True" Click="ButtonClick" Height="20"/>
+        <Button x:Name="YesButton" Content="{DynamicResource YesBtnTitle}" HorizontalAlignment="Left" Margin="10,0,0,9.667" VerticalAlignment="Bottom" Width="75" Style="{DynamicResource TextButtonStyle}" Foreground="White" IsDefault="True" Visibility="Hidden" Click="ButtonClick" Height="20"/>
+        <Button x:Name="NoButton" Content="{DynamicResource NoBtnTitle}" HorizontalAlignment="Right" Margin="0,0,10,9.667" VerticalAlignment="Bottom" Width="75" Style="{DynamicResource TextButtonStyle}" Foreground="White" IsCancel="True" Visibility="Hidden" Click="ButtonClick" Height="20"/>
+        <Image x:Name="DialogIcon" HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" VerticalAlignment="Top" Width="32" Source="/ImageViewer;component/Icons/Information.png"/>
+
+    </Grid>
+</Window>

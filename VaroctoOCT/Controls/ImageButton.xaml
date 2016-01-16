@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="VaroctoOCT.ImageButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VaroctoOCT"
+             mc:Ignorable="d" 
+             d:DesignHeight="59.322" d:DesignWidth="251.267" MouseEnter="Control_MouseEnter" MouseLeave="Control_MouseLeave" MouseLeftButtonDown="Control_MouseButtonDown" IsEnabledChanged="Control_EnableChanged" MouseLeftButtonUp="Control_MouseButtonUp">
+    <Border x:Name="border" BorderThickness="1">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+            <Image x:Name="image" Margin="8" VerticalAlignment="Center" Source="/ImageViewer;component/LogoSmall.png"/>
+            <Label x:Name="label" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18.667" Foreground="White"/>
+        </StackPanel>
+    </Border>
+</UserControl>
+
